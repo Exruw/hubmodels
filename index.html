@@ -3,32 +3,31 @@
 	<head>
 		<title>Asset Downloader</title>
 		<meta name="description" content="Download any asset from the Roblox Catalog/Library">
-		<link href="style.css" rel="stylesheet" type="text/css" /> 
 		<link href="https://hubchicken.tk/HUBCHICKEN.png" rel="shortcut icon">
+		<link href="style.css" rel="stylesheet" type="text/css" />
 	</head>
 	<body>
-		<div class="topbar">
-			<p>Asset Downloader</p>
-		</div>
-		<div class="content-container">
-			<p>ID and Version</p>
-			<hr />
-			<input id="txt1" type="text" placeholder="Asset ID">
-			<br>
-			<input id="txt2" type="text" placeholder="Version">
-			<button onclick="download(`https://assetdelivery.roblox.com/v1/asset/?id=${document.getElementById('txt1').value}&version=${document.getElementById('txt2').value}`)">Download</button>
-		</div>
 		<script>
-		/*
-		function download(url) {
+			function download(url) {
 			let anchor = document.createElement("a")
 			anchor.download = true
 			anchor.href = url
 			anchor.click()
-		}
-		idk for later
-exruw cannot code!
-		*/
+			}
 		</script>
+		<body onload="document.body.style.opacity='1'" style="opacity: 1">
+			<div class="topbar">
+				<p>
+					Asset Downloader
+				</p>
+			</div>
+			<div class="content-container">
+				<p>ID and Version</p>
+				<hr />
+				<input id="txt1" type="text" placeholder="Asset ID">
+				<br>
+				<input id="txt2" type="text" placeholder="Version">
+				<button onclick="download(`https://assetdelivery.roblox.com/v1/asset/?id=${document.getElementById('txt1').value}&version=${document.getElementById('txt2').value}`)">Download</button>
+			</div>
 	</body>
 </html>
