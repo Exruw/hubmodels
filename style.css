@@ -40,6 +40,7 @@ hr {
 
 .content-container {
 	display: block;
+  text-align: center;
 	margin: auto;
 	width: 50%;
 	min-width: 300px;
@@ -71,7 +72,7 @@ hr {
 	font-size: 15px;
 	user-select: none;
 	text-decoration: none;
-	text-align: left;
+	text-align: center;
 	color: white;
 	transition: background-color 0.25s ease, text-decoration 0.25s ease;
 }
@@ -95,6 +96,22 @@ footer p {
 }
 
 @media screen and (max-width: 768px) {
+	.topbar p {
+		font-size: 17px;
+	}
+
+	.topbar a {
+		font-size: 12px;
+	}
+
+	.content-container {
+		width: 85%;
+	}
+
+	.content-container video {
+		height: 300px;
+	}
+
 	.content-container a {
 		font-size: 12px;
 	}
