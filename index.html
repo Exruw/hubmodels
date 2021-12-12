@@ -4,7 +4,8 @@
 		<title>Asset Downloader</title>
 		<meta name="description" content="Download any asset from the Roblox Catalog/Library">
 		<link href="https://hubchicken.tk/HUBCHICKEN.png" rel="shortcut icon">
-		<link href="style.css" rel="stylesheet" type="text/css" />
+		<link href="https://models.hubchicken.tk/style.css" rel="stylesheet" type="text/css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	</head>
 	<body>
 		<script>
@@ -15,21 +16,36 @@
 			anchor.click()
 			}
 		</script>
-			<div class="topbar">
-				<p>
-					Asset Downloader
-				</p>
-			</div>
-			<div class="content-container">
-				<p>ID and Version</p>
-				<hr />
-				<input id="txt1" type="text" placeholder="Asset ID">
-				<br>
-				<input id="txt2" type="text" placeholder="Version">
-        			<br>
-				<p><input type="checkbox" id="offsalecheck"> Offsale </p>
-				<button onclick="download(`https://assetdelivery.roblox.com/v1/asset/?id=${document.getElementById('txt1').value}&version=${document.getElementById('txt2').value}`)">Download</button>
-			</div>
+		<div class="topbar">
+			<p>
+				Asset Downloader
+			</p>
+		</div>
+		<div class="content-container">
+			<p>ID and Version</p>
+			<hr />
+			<input id="txt1" type="text" placeholder="Asset ID">
+			<br>
+			<input id="txt2" type="text" placeholder="Version">
+			<br>
+			<p><input type="checkbox" id="offsalecheck"> Offsale (Very Laggy If You Use On Onsale Asset) </p>
+			<input type="button" value="Download" onClick="">
+		</div>
+		<script>
+			// Forgive me for using jquery
+			 var checkbox = document.getElementById("offsalecheck")
+			 $(document).ready(function(e) {
+			 $('input[type="button"]').click(function() {
+			 if ($('#offsalecheck').is(':checked')) {
+			               while (checkbox.checked == true) {
+			 download(`https://assetdelivery.roblox.com/v1/asset/?id=${document.getElementById('txt1').value}&version=${document.getElementById('txt2').value}`)
+			 }
+			 } else {
+			       download(`https://assetdelivery.roblox.com/v1/asset/?id=${document.getElementById('txt1').value}&version=${document.getElementById('txt2').value}`)
+			 }
+			 });
+			 });  
+		</script>
 		<img src="https://hubchicken.tk/HUBCHICKEN.png"/> 
 	</body>
 </html>
