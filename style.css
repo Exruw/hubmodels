@@ -2,8 +2,7 @@
  body {
 	margin: 0;
 	background-color: #1e1e1e;
-	opacity: 0;
-	transition: opacity 0.5s;
+	opacity: 5;
 }
 
 hr {
