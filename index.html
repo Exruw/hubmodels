@@ -9,24 +9,20 @@
 	<body>
 		<script>
 			function download(url) {
-			let anchor = document.createElement("a")
-			anchor.download = true
-			anchor.href = url
-			anchor.click()
+				let anchor = document.createElement("a");
+				anchor.download = true;
+				anchor.href = url;
+				anchor.click();
 			}
 		</script>
 			<div class="topbar">
-				<p>
-					Asset Downloader
-				</p>
+				<p>Asset Downloader</p>
 			</div>
 			<div class="content-container">
 				<p>ID and Version</p>
-				<hr />
+				<hr>
 				<input id="txt1" type="text" placeholder="Asset ID">
-				<br>
 				<input id="txt2" type="text" placeholder="Version">
-        			<br>
 				<button onclick="download(`https://assetdelivery.roblox.com/v1/asset/?id=${document.getElementById('txt1').value}&version=${document.getElementById('txt2').value}`)">Download</button>
 			</div>
 		<img src="https://hubchicken.tk/HUBCHICKEN.png"/> 
