@@ -40,7 +40,7 @@ hr {
 
 .content-container {
 	display: block;
-  text-align: center;
+ 	text-align: center;
 	margin: auto;
 	width: 50%;
 	min-width: 300px;
@@ -50,6 +50,13 @@ hr {
 	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 	overflow: auto;
 	margin-bottom: 20px;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;  
+  width: 32%;
 }
 
 .content-container p {
